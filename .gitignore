@@ -38,3 +38,5 @@ hs_err_*.log
 replay_*.log
 *.hprof
 *.jfr
+
+cute-verification-device-id-provider.dll
