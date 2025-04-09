@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "io.github.gdrfgdrf.cuteverification.web.minecraft.client.impl.fabric.mixin",
+	"compatibilityLevel": "JAVA_8",
+	"mixins": [
+        "ClientLoginNetworkHandlerMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "cute-verification-client",
+	"version": "${version}",
+	"name": "cute-verification-client",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"gdrfgdrf"
+	],
+	"contact": {
+		"homepage": "https://github.com/cute-verification/",
+        "sources": "https://github.com/cute-verification"
+	},
+	"license": "Apache License 2.0",
+	"icon": "assets/cute-verification-client/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			{
+				"value": "io.github.gdrfgdrf.cuteverification.web.minecraft.client.impl.fabric.ClientMain",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"cute-verification-client.mixins.json"
+	],
+	"depends": {
+		"java": ">=8",
+		"fabric": "*",
+		"fabric-language-kotlin": "*"
+	},
+    "accessWidener": "cute-verification-client.accesswidener"
+}
