@@ -1,6 +1,8 @@
 package io.github.gdrfgdrf.cuteverification.web.minecraft.client.impl.fabric.mixin;
 
+import io.github.gdrfgdrf.cuteverification.web.minecraft.client.compatible.ClientCompatible;
 import io.github.gdrfgdrf.cuteverification.web.minecraft.client.impl.fabric.ClientMain;
+import net.minecraft.MinecraftVersion;
 import net.minecraft.client.network.ClientLoginNetworkHandler;
 import net.minecraft.network.ClientConnection;
 import net.minecraft.network.packet.s2c.login.LoginSuccessS2CPacket;
@@ -25,7 +27,11 @@ public class ClientLoginNetworkHandlerMixin {
         new Thread(() -> {
             try {
                 Thread.sleep(200);
-                ClientMain.INSTANCE.send("test_key_1234567", connection.channel);
+                ClientCompatible.INSTANCE.send(
+                        "test_key_1234567",
+                        connection.channel,
+                        MinecraftVersion.create().getName()
+                );
             } catch (InterruptedException e) {
             }
         }).start();
